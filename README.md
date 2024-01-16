@@ -24,4 +24,7 @@
 5. 리스트 특정 요소를 조합하여 문장 만들기
 - 콤마로 잇기 `the_list[index1], "string" , the_list[index2]`
 - f-string으로 잇기 `f'{the_list[index1]} string {the_list[index2]}}`
-6. 
+6. 대박 어려운 거 등장..!! `var = dict()`
+- `var = dict()`는 다음 변수를 dict의 형태로 나타내겠다는 의미
+- `x=[l0,l1,l2]`, `y=[l4,l5,l6]`일 때, `var[x[0]] = y[0]` 이라고 두면 `{l0 : l4}`의 형태로 나타난다.
+7. 
