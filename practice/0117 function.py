@@ -68,47 +68,67 @@
 # down = sorted(unsorted_list, reverse=True) #sorted함수의 인자 값에 ,reverse=True를 추가한다!
 # print(down)
 
+# # split 함수
+# text = "Hello, World!"
+# text.split()
+# #리턴이 있는지 없는지는 print 해 봐야
+# print(text.split()) #['Hello,', 'World!'] -> 리턴이 있음!
 
-text = "Hello, World!"
-text.split()
-#리턴이 있는지 없는지는 print 해 봐야
-print(text.split()) #['Hello,', 'World!'] -> 리턴이 있음!
+# split2 = text.split("H")
+# print(split2) #['', 'ello, World!']
 
-split2 = text.split("H")
-print(split2) #['', 'ello, World!']
-
-split3 = text.split("l")
-print(split3) #['He', '', 'o, Wor', 'd!']
-
-
-
-
-
-
-
-
-
-
-
-
-
-# def greet(name, age):
-#     print(f'안녕하세요, {name}님! {age}살이시군요.')
-
-# greet(age=30, name='Bella')
-
-
-# # greet('Alice', 25)
-# # greet('Alice', 25, 'AAA')
-
-# def func(pos1, pos2, age=30, *args, **kwargs):
-#     print(pos1, pos2, age, args, kwargs)
-
-# func(1, 2, 3, a=100, b=200)
+# split3 = text.split("l")
+# print(split3) #['He', '', 'o, Wor', 'd!']
 
 # # 반복문을 쓴 듯한 map함수
 # numbers = [1, 2, 3]
-# result = map(str, numbers)
+# result = map(str, numbers) #['1', '2', '3']
 
 # print(result)
 # print(list(result))
+
+# #zip 함수
+# girls = ['jiji', 'ash']
+# boys = ['peter', 'jason']
+# pair = zip(girls, boys)
+
+# print(pair) #<zip object at 0x000001828AE1AC00>
+# print(dict(pair)) #{'jiji': 'peter', 'ash': 'jason'}
+
+#실습 Lv.4 문제
+# 1. zip()
+# 1.1 일단 zip으로 묶어서 결과 보기
+# def create_user(user_info):
+#     name, age, address = user_info #인자의 구성 자체를 튜플에서 unpack
+#     increase_user()
+#     user_info = {
+#         'name': name,
+#         'age': age,
+#         'address': address
+#     }
+#     print(f'{name}님 환영합니다!')
+#     return user_info
+
+# number_of_people = 0
+
+
+# def increase_user():
+#     pass
+
+
+# def create_user():
+#     pass
+
+
+# name = ['김시습', '허균', '남영로', '임제', '박지원']
+# age = [20, 16, 52, 36, 60]
+# address = ['서울', '강릉', '조선', '나주', '한성부']
+
+# zip_user = list(zip(name, age, address))
+# print(zip_user)
+
+# # 1.2 map 함수를 사용해서 zip으로 묶인 사용자들에게 
+# # 각각 create_user 함수를 적용
+
+# result = list(map(create_user, zip_user))
+# print(result)
