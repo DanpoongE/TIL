@@ -1,30 +1,45 @@
-# 1월 16일 파이썬 기초 문법
-1. data type
-- 수 : int, float -> 형변환시 다음과 같은 함수로 사용할 수 있다. int(), float()
-- sequence : str, list, tuple, range
-  - 순서있음. index로 특정 요소만 불러낼 수 있다. `**변수명[index]**`
-  - list만 유일하게 변경가능
-  - range는 반복문, list와 함께 쓰여 다음과 같은 형태를 띤다. `print(list(range변수명))`
-- non-sequence : dict, set
-  - 순서없음. index가 아닌 `key`로 특정 요소만 불러낼 수 있다. 
-
-2. 단축평가
-- 효율적인 계산을 위하여 모든 연산을 진행하지 않고, and의 경우 전자가 F이면 F를, or의 경우 전자가 T이면 T를 도출하는 것을 말함.
-- 값이 '존재'하면 True, '없으면' False. 
+1. 들어가기 전에...
+- 어떤 함수가 return이 있는지 없는지는 함수 호출 후 원본이 변했는지 변하지 않았는지를 보면 된다. 변했다면 return이 없고, 변하지 않았다면 리턴이 있다.
+- 다른 확인법으로는 해당 함수를 print해 보는 방법이 있다. print(변수명.함수())했을 때, None이라면 return이 없고, 어떤 값이 나오면 return이 있다!
+2. 함수의 기본 개념
+- 함수는 정의 와 호출이 따로다
+- 정의는 `def와 return`으로 이루어지게 되는데, return이 있어야 끝난다.
+- return이 없는 경우도 있다. 이처럼 return이 명시되지 않는 경우에는 'None'이 출력된다. 
+- 예시
   
-3. 형변환
-- list를 set으로 변환하는법 : `a = [list]`를 다음과 같이 재할당한다. `a = set(a)` 
-- 이때 set{}가 아닌 `set()`로 표현한다. 함수이기 때문. 
-- 그러니까 set은 non-sequence 타입이기도 하면서 함수로도 사용이 가능한거!
-4. range
-- range(n): 0부터 **n-1**까지의 숫자 시퀀스
-- range(n, m-1): n부터 m-1까지
-- **range에도 index 0부터가 적용됨. 끝부분 m-1**
-- range를 list로 출력하기 위해서는, `변수x = range(범위)`로 설정하고 print시 list함수 써주기. `print(list(x))`
-5. 리스트 특정 요소를 조합하여 문장 만들기
-- 콤마로 잇기 `the_list[index1], "string" , the_list[index2]`
-- f-string으로 잇기 `f'{the_list[index1]} string {the_list[index2]}}`
-6. 대박 어려운 거 등장..!! `var = dict()`
-- `var = dict()`는 다음 변수를 dict의 형태로 나타내겠다는 의미
-- `x=[l0,l1,l2]`, `y=[l4,l5,l6]`일 때, `var[x[0]] = y[0]` 이라고 두면 `{l0 : l4}`의 형태로 나타난다.
-7. 
+  a = print(1)
+  
+  print(a)하면 뭐가 나올까?
+
+  ----
+  a. print(1) 함수가 호출
+  
+  b. 호출된 결과로 터미널에 1이 출력
+  
+  c. print(a) 함수가 호출
+  
+  d. 호출된 결과로 None을 뱉으면서 종료
+  
+- print() 함수는 return이 없는 함수다! (=return이 None이라는 의미)
+  
+3.  built-in function
+   1. `sum()`
+   - 주어진 (list,tuple,range,set)의 `값`을 모두 더할 때 쓰는 함수
+   - 값이니까 int가 아닌 str은 안됨~
+   2. `bool()`
+   - `bool(변수명)`
+   - (안에는 int, list 등 가능)
+   - `bool(0)` 과 `bool([0])`은 같지 않다. 각각 F / T 도출됨
+   3. `abs()`
+   - 절댓값을 도출하는 함수
+   4. `sorted()`
+   - 오름차순 정렬. 원본은 바뀌지 않는 채, return값으로 정렬된 새로운 리스트가 나온다.
+   - `변수명.sort()`도 오름차순 정렬하는 방식인데, 이 친구는 `return값이 없다. 즉, 원본 자체가 바뀌기 때문에` 오름차순 된 결과를 얻고 싶으면 `print(변수명)`을 호출하면 된다. 
+   5. `sorted(변수명, reverse=True)`
+   - 내림차순 정렬.
+   6. `sep()`
+   7. `reversed(seq)`
+   8. `변수명.split()`
+   - ()을 기준으로 나눈다. 공백이라면 str 공백을 기준으로, 다른 문자라면 해당 문자 전부를 기준으로 원본이 나뉘게 된다.
+
+4. 
