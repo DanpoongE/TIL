@@ -31,3 +31,6 @@
     - while + list가 빌 때까지 반복
     - while len(list_data) > 0 
 11. for문에서 iterable의 길이 조작 금지!
+12. if문에서 `.isdecimal()`과 같은 true/false를 뱉어내는 메서드를 쓴 경우
+   - true면 if문이 실행되고, false면 elif나 else로 넘어간다!
+13.
