@@ -1,36 +1,12 @@
-1. `.count()` 는 리스트에서만 사용 가능하다. 
-   - 다른 type의 경우 list로 형변환이 필요하겠쬬?
-2. index
-   - min은 0
-   - max는? len(리스트)가 아니라 `len()-1`!! 이거 전에 강조했었어!!
-3. index
-   - 각 수마다 index는 두 개. 0부터 커지는 거 하나랑 -1부터 작아지는 거 하나!
-4. str 뒤집기
-   - `reversed()` 내장 함수를 쓴다
-   - 그대로 출력하면 <0x0021300>이런게 뜬다. 메모리에 저장된 상태이나 내가 읽을 수 없는 상태. 
-   - 이 경우 `''.join()`을 통해 구분자 없이 하나의 문자열로 나타나도록 한다. 
-5. s.split(구분자, maxsplit자르는횟수)
-   - 구분자의 기본값 None, 자르는횟수의 기본값 -1
-   - **반환이 있다! split된 문자열의 리스트가 반환됨** 
-  
-6. int() 형변환
-   - int(float나 str)만 가능
-  
-7. for문, print 한줄로 쓰기
-   - `end=' '` 를 붙여주면 됨!
-   - 예를 들면, print(result, `end=' '`) 
-   - end의 작은따옴표 사이에는 구분자를 넣어주면 된다. 출력되는 값 사이사이에 들어가면 좋겠는거!
-8. 줄바꿈
-   - `print()`함수는 줄바꿈 문자가 생략되어 있다. 따라서 그냥 쓰면 줄바꿈이 된다. 
-9.  l.append와 l.extend
-    - append는 한 요소만 추가 가능하며, 모양 그대로 추가된다.
-    - extend는 여러 요소나 iterable이 추가 가능하며, 형태가 풀려 추가된다. 
-    - extend는 `(iterable)` 한 게 오느냐 안오느냐를 묻는 질문에 잘 쓰임. 따라서 ([요소1개짜리list]) 를 잘 기억할 것!! 이거 과제 5번에서 쓰인당.
-10. 혹시나 5번 과제를 도전한다면..
-    - pop을 쓰면 list가 자꾸 줄어들어서 고정된 횟수만큼의 반복이 어려워진다.
-    - while + list가 빌 때까지 반복
-    - while len(list_data) > 0 
-11. for문에서 iterable의 길이 조작 금지!
-12. if문에서 `.isdecimal()`과 같은 true/false를 뱉어내는 메서드를 쓴 경우
-   - true면 if문이 실행되고, false면 elif나 else로 넘어간다!
-13. `for i in range(len(list))` -> range 수만큼 돈다!
+1. def 함수 시 print, return의 차이
+   - print()는 함수다. 그러니까 반복돼
+   - return은 def된 함수를 끝내는 거. 
+   - print(print(1)) -> 우선 `print(1)=1`이 출력되고 그 프린트 함수 반복되면서 return이 더이상 없음 -> 이걸 바깥의 print()가 받아서 'None'값이 출력됨.
+2. d.setdefault(k[,v])의 기능
+   - setdefault는 key에 해당하는 `value를 찾을 수 있고`
+   - 없는 key는 value와 함께 dict에 추가한다. 
+   - 이때 d.setdefault 메서드 자체를 print하면 `추가된 v`가 나오고
+   - dict를 print하면 `v가 추가된 dict`가 나온당
+3. print(set)
+   - 배열 순서가 계속 바뀐다. 순서가 없기 때문에.
+4.  
