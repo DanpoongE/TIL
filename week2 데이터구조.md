@@ -23,3 +23,7 @@
 8. `for i in range(len(list))` -> range 수만큼 돈다!
 9. if문에서 `.isdecimal()`과 같은 true/false를 뱉어내는 메서드를 쓴 경우
    - true면 if문이 실행되고, false면 elif나 else로 넘어간다!  
+10. copy의 유형
+   - 할당 = -> 이 경우 같이 바뀜
+   - 얕은 복사 b = a[:]
+   - 깊은 복사 `import copy` `l.deepcopy()`
