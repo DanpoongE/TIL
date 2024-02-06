@@ -1,9 +1,24 @@
-1. 행렬에서 가장자리 값을 포함시키지 않는 경우: `for i in range(1, N-1)`, `for j in range(1, N-1)` 로 지정해주면 더 좋다...!
-2. list 요소 하나하나 풀어주는 방법: `print( , end='')`, `unpack *`
-3. sort와 sorted()의 차이
-   - `l.sort()`는 리스트형의 메소드. 원본값을 직접 수정한다.
-   - `sorted(l)`은 내장함수로서 원본은 건드리지 않고 정렬 값을 반환한다. 
-4. `sorted(iterable, /, *, key=None)` -> 상우 코드 참고
-5. `repr()` 함수는 변수 또는 객체의 고유 표기 정보를 문자열로 만듦. 
-6. `if str1 in str2:`
-7. `find` 메서드는 char의 index를 찾아주는 함수에오. 없으면 -1이오.
+1. 정규표현식
+   - import re
+   - pattern = abcd
+   - text = abelskdfevsabcdabcd
+   - `print(re.findall(pattern, text))` -> abcd 겹치는 거 list 형태로 다나온다.
+2. 문자열 내에서 특정 문자열 개수 찾기
+   - `s.count(txt)`
+3. 문자열의 문자들을 분리하여 리스트로 변환하는 법
+   - str = "ddd"
+   - new_list = `list(str)`
+4. `input().split()`을 하는 이유는 문자열 사이사이에 있는 공백을 제거하기 위해서
+5. `map(함수, 객체)`의 경우 map은 객체 요소 하나하나에 함수를 적용하겠다는 뜻임
+6. `break` for문 끝에 break 써주면 한번만 돌고 끝난다.
+7. 문자열 split
+   - `banana bana`의 경우 a, b = input().split() 하면 
+8. 빈 set 만들기
+   - a = set()
+   - {}인데 딕셔너리로 인식하기 때문
+9.  set 메서드
+   - list는 append나 extend / set은 add!
+10. unpacking
+   - f-str은 함수가 아니라 내부에서 언패킹을 할 수 없다. 
+   - print는 함수라 unpacking 가능!
+11. 
