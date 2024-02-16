@@ -21,4 +21,5 @@
 10. unpacking
    - f-str은 함수가 아니라 내부에서 언패킹을 할 수 없다. 
    - print는 함수라 unpacking 가능!
-11. 
+11. stack
+   - 막 들어온 값과 비교대상이 되는 값을 index로 접근하지 않아도 for x in list 등으로 비교할 수 있음 
