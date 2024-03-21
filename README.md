@@ -1,20 +1,4 @@
-# HTML 태그들!
+240321
 
-1. `title`: <head><title> 탭에 들어갈 문구 </title></head>
-2. `a`: <a href="하이퍼링크"></a>
-3. `img`: <img src="이미지주소" alt="대체텍스트"/>
-4. `form`
-5. `label`: 사용자 인터페이스 항목의 설명. 안내 문구 같은거.
-6. `input type="결정가능"`: 특정 항목(id, pw)을 입력할 빈칸이 생성된다.
-7. `input type="submit" value="들어갈 문구"`: 로그인 버튼 등을 만들 수 있다.
-8. `div`: division의 약자로 가상의 레이아웃을 셀계하는데 쓰이며 특별한 기능x
-9. `value`: input 안에서 쓰면 해당 빈칸 안에 들어갈 기본 문구를 적을 수 있다.
-10. CSS: <style> 부분에 내부 스타일 시트 형식으로 만들기.
-11. `padding: 10px` 컨텐츠와 box사이에 여백이 생김
-12. `background-color`
-13. `text-align: center`
-
-# HTML 작성 요령
-
-- 당장 작성하지 않아도 되는 속성에는 `#` 작성
--
+1. var1, var2 = `map(int, input().split())` list로 안 묶어도 됨
+2. for _ in range(`len(A)`) 로 for문을 돌릴 때, A라는 리스트에 요소가 추가되더라도 처음 주어진 수만큼 for문이 다 돌기 전까지는 `len(A)`가 변하지 않는다.
